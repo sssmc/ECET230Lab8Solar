@@ -11,6 +11,11 @@
              Route="SolarControl">
             <ShellContent ContentTemplate="{DataTemplate local:SolarControl}" />
         </Tab>
+        <Tab
+            Title="Raw Data "
+            Route="SolarControl">
+            <ShellContent ContentTemplate="{DataTemplate local:RawData}" />
+        </Tab>
     </TabBar>
 
 </Shell>

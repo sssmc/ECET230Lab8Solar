@@ -1,81 +1,156 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-using System.IO.Ports;
-using System.Text;
-using System.Windows.Input;
-
 namespace ECET230Lab8SolarDesktop;
 
 public class SolarViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private string _rawPacket;
+    private float _analog0Voltage;
+    private float _analog1Voltage;
+    private float _analog2Voltage;
+    private float _analog3Voltage;
+    private float _analog4Voltage;
 
-    private SerialPort _serialPort;
-
-    private bool _comPortOpen;
-
-    public ICommand ChangeComPortCommand { get; private set;  }
-
-    public ICommand StartStopComPortCommand { get; private set;}
-
-    public bool ComPortOpen
-    {
-        get => _comPortOpen;
+    public int Analog0Voltage {
         set
         {
-            _comPortOpen = value;
+            _analog0Voltage = value;
             OnPropertyChanged();
-            if (_comPortOpen)
-                _serialPort.Open();
-            else
-                _serialPort.Close();
+            OnPropertyChanged("SolarVoltage");
+            OnPropertyChanged("SolarVoltageText");
         }
     }
 
-    public string[] ComPorts
+    public int Analog1Voltage
     {
-        get => SerialPort.GetPortNames();
-
-    }
-
-    public SolarViewModel() {
-        _serialPort = new();
-        _serialPort.DataReceived += SerialPort_DataReceived;
-
-        this.ComPortOpen = false;
-
-        ChangeComPortCommand = new Command<string>(ChangeComPort);
-
-        StartStopComPortCommand = new Command(StartStopComPort);
-
-    }
-
-    private void StartStopComPort()
-    {
-        this.ComPortOpen = !this.ComPortOpen;
-    }
-
-    private void ChangeComPort(string comPort)
-    {
-        _serialPort.PortName = comPort;
-    }
-
-    private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
-    {
-        this.RawPacket = _serialPort.ReadLine();
-    }
-
-    public string RawPacket
-    {
-        get => _rawPacket;
         set
         {
-            _rawPacket = value;
+            _analog1Voltage = value;
             OnPropertyChanged();
+            OnPropertyChanged("BatteryChargingCurrent");
+            OnPropertyChanged("BatteryChargingCurrentText");
         }
+    }
+
+    public int Analog2Voltage
+    {
+        set
+        {
+            _analog2Voltage = value;
+            OnPropertyChanged();
+            OnPropertyChanged("BatteryChargingCurrent");
+            OnPropertyChanged("BatteryChargingCurrentText");
+            OnPropertyChanged("BatteryVoltage");
+            OnPropertyChanged("BatteryVoltageText");
+        }
+    }
+
+    public int Analog3Voltage
+    {
+        set
+        {
+            _analog3Voltage = value;
+            OnPropertyChanged();
+            OnPropertyChanged("Load2Current");
+            OnPropertyChanged("Load2CurrentText");
+        }
+    }
+
+    public int Analog4Voltage
+    {
+        set
+        {
+            _analog4Voltage = value;
+            OnPropertyChanged("Load1Current");
+            OnPropertyChanged("Load1CurrentText");
+        }
+    }
+
+    public float SolarVoltage
+    {
+        get => _analog0Voltage;
+    }
+
+    public string SolarVoltageText
+    {
+        get
+        {
+            return ((float)SolarVoltage/1000f).ToString("0.00") + "V";
+        }
+    }
+
+    public float BatteryVoltage
+    {
+        get => _analog2Voltage;
+    }
+
+    public string BatteryVoltageText
+    {
+        get
+        {
+            return ((float)BatteryVoltage/1000f).ToString("0.00") + "V";
+        }
+    }
+
+    public float Load1Current
+    {
+        get 
+        {
+            return (float)_analog4Voltage / 100f;
+        }
+    }
+
+    public string Load1CurrentText
+    {
+        get
+        {
+            return Load1Current.ToString("####.##") + "mA";
+        }
+    }
+
+    public float Load2Current
+    {
+        get
+        {
+            return (float)_analog3Voltage / 100f;
+        }
+    }
+
+    public string Load2CurrentText
+    {
+        get
+        {
+            return Load2Current.ToString("####.##") + "mA";
+        }
+    }
+
+    public float BatteryChargingCurrent
+    {
+        get
+        {
+            return (float)(_analog1Voltage - _analog2Voltage) / 100f;
+        }
+    }
+
+    public string BatteryChargingCurrentText
+    {
+        get
+        {
+            return BatteryChargingCurrent.ToString("####.##") + "mA";
+        }
+    }
+
+    public SolarViewModel()
+    {
+        _analog0Voltage = 0;
+        _analog1Voltage = 0;
+        _analog2Voltage = 0;
+        _analog3Voltage = 0;
+        _analog4Voltage = 0;
+
+
     }
 
     public void OnPropertyChanged([CallerMemberName] string name = "") =>

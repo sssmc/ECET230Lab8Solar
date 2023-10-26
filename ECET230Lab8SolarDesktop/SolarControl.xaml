@@ -7,12 +7,31 @@
     <ContentPage.BindingContext>
         <local:SolarViewModel/>
     </ContentPage.BindingContext>
-        
     <VerticalStackLayout>
-        <Label 
-            Text="{Binding RawPacket}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            x:Name="testLabel"/>
+        <Label
+            Text="Solar Plant Control"
+            FontSize="Large"
+            HorizontalOptions="Center"/>
+        <HorizontalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    Text="Voltages"
+                    FontSize="Medium"
+                    Margin="20"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="Panel Voltage:"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="{Binding SolarVoltageText}"
+                    HorizontalOptions="Center"/>
+                <Label
+                     Text="Battery Voltage"
+                     HorizontalOptions="Center"/>
+                <Label
+                    Text="{Binding BatteryVoltageText}"
+                    HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

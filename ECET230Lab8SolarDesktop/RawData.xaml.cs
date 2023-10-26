@@ -1,6 +1,7 @@
 ﻿namespace ECET230Lab8SolarDesktop;
 
 using System.IO.Ports;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 public partial class RawData : ContentPage
@@ -69,8 +70,6 @@ public partial class RawData : ContentPage
         bool packetError = false;
 
         rawPacketLabel.Text = newPacket;
-
-        App.solarViewModel.RawPacket = newPacket;
 
         //Check for the correct header
         if (newPacket.Substring(0, 3) != "###")
@@ -188,6 +187,13 @@ public partial class RawData : ContentPage
                 adc3ProgressBar.Progress = (float)rawADCInputs[3] / 3300.0f;
                 adc4ProgressBar.Progress = (float)rawADCInputs[4] / 3300.0f;
                 adc5ProgressBar.Progress = (float)rawADCInputs[5] / 3300.0f;
+
+                App.solarViewModel.Analog0Voltage = rawADCInputs[0];
+                App.solarViewModel.Analog1Voltage = rawADCInputs[1];
+                App.solarViewModel.Analog2Voltage = rawADCInputs[2];
+                App.solarViewModel.Analog3Voltage = rawADCInputs[3];
+                App.solarViewModel.Analog4Voltage = rawADCInputs[4];
+
 
                 //For every digital input
                 string digitalInputsText = "";
