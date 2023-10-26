@@ -7,10 +7,6 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="RawData"
-             Route="RawData">
-            <ShellContent ContentTemplate="{DataTemplate local:RawData}" />
-        </Tab>
         <Tab Title="Solar Control"
              Route="SolarControl">
             <ShellContent ContentTemplate="{DataTemplate local:SolarControl}" />
