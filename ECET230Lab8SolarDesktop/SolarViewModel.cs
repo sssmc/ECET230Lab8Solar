@@ -98,7 +98,7 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get 
         {
-            return (float)_analog4Voltage / 100f;
+            return ((float)_analog4Voltage - (float)_analog1Voltage) / 100f;
         }
     }
 
@@ -106,7 +106,7 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get
         {
-            return Load1Current.ToString("####.##") + "mA";
+            return Load1Current.ToString("###0.##") + "mA";
         }
     }
 
@@ -114,7 +114,7 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get
         {
-            return (float)_analog3Voltage / 100f;
+            return ((float)_analog3Voltage - (float)_analog1Voltage) / 100f;
         }
     }
 
@@ -122,7 +122,7 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get
         {
-            return Load2Current.ToString("####.##") + "mA";
+            return Load2Current.ToString("###0.##") + "mA";
         }
     }
 
@@ -138,7 +138,7 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get
         {
-            return BatteryChargingCurrent.ToString("####.##") + "mA";
+            return BatteryChargingCurrent.ToString("###0.##") + "mA";
         }
     }
 

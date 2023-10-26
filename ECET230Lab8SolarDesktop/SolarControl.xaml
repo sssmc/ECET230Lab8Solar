@@ -20,7 +20,7 @@
                     Margin="20"
                     HorizontalOptions="Center"/>
                 <Label
-                    Text="Panel Voltage:"
+                    Text="Panel Voltage"
                     HorizontalOptions="Center"/>
                 <Label
                     Text="{Binding SolarVoltageText}"
@@ -31,6 +31,32 @@
                 <Label
                     Text="{Binding BatteryVoltageText}"
                     HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    Text="Currents"
+                    FontSize="Medium"
+                    Margin="20"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="Load #1"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="{Binding Load1CurrentText}"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="Load #2"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="{Binding Load2CurrentText}"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="Battery Charging"
+                    HorizontalOptions="Center"/>
+                <Label
+                    Text="{Binding BatteryChargingCurrentText}"
+                    HorizontalOptions="Center"/>
+
             </VerticalStackLayout>
         </HorizontalStackLayout>
     </VerticalStackLayout>
