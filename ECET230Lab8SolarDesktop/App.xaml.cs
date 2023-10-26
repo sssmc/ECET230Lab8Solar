@@ -2,11 +2,14 @@
 
 public partial class App : Application
 {
-	public App()
+    public static SolarViewModel solarViewModel;
+    public App()
 	{
 		InitializeComponent();
 
 		MainPage = new AppShell();
+
+		solarViewModel = new SolarViewModel();
 	}
 }
 

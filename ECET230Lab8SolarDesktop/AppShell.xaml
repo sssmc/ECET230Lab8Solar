@@ -6,10 +6,16 @@
     xmlns:local="clr-namespace:ECET230Lab8SolarDesktop"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="RawData"
+             Route="RawData">
+            <ShellContent ContentTemplate="{DataTemplate local:RawData}" />
+        </Tab>
+        <Tab Title="Solar Control"
+             Route="SolarControl">
+            <ShellContent ContentTemplate="{DataTemplate local:SolarControl}" />
+        </Tab>
+    </TabBar>
 
 </Shell>
 
