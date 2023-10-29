@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj": {}
+    "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj": {}
   },
   "projects": {
-    "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj": {
+    "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
         "projectName": "App",
-        "projectPath": "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
-        "packagesPath": "C:\\Users\\C0509401\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\C0509401\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ECET230Lab8SolarDesktop"
              x:Class="ECET230Lab8SolarDesktop.RawData">
-
+    <ContentPage.BindingContext>
+        <local:SolarViewModel/>
+    </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout>
             <Label
@@ -402,7 +405,8 @@
                             <Switch
                                 x:Name="digitalOutput1Switch"
                                 Margin="10"
-                                Toggled="digitalOutput1Switch_Toggled"/>
+                                Toggled="digitalOutput1Switch_Toggled"
+                                IsToggled="{Binding IsLoad1On}"/>
                         </VerticalStackLayout>
                         <VerticalStackLayout>
                             <Label
@@ -411,7 +415,8 @@
                             <Switch
                                 x:Name="digitalOutput2Switch"
                                 Margin="10"
-                                Toggled="digitalOutput2Switch_Toggled"/>
+                                Toggled="digitalOutput2Switch_Toggled"
+                                IsToggled="{Binding IsLoad2On}"/>
                         </VerticalStackLayout>
                         <VerticalStackLayout>
                             <Label

@@ -254,6 +254,8 @@ public partial class RawData : ContentPage
 
             serialPort.Open();
 
+            sendPacket();
+
             comPortStartButton.Text = "Close";
         }
     }

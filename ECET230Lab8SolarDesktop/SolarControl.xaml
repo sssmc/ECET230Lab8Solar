@@ -58,6 +58,31 @@
                     HorizontalOptions="Center"/>
 
             </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    Text="Load Control"
+                    FontSize="Medium"
+                    Margin="20"
+                    HorizontalOptions="Center"/>
+                <HorizontalStackLayout>
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Load #1"
+                            HorizontalOptions="Center"/>
+                        <Switch
+                            IsToggled="{Binding IsLoad1Off}"
+                            HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <Label
+                            Text="Load #2"
+                            HorizontalOptions="Center"/>
+                        <Switch
+                            IsToggled="{Binding IsLoad2Off}"
+                            HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
