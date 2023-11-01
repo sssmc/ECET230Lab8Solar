@@ -8,4 +8,9 @@ public partial class SolarControl : ContentPage
 
 		BindingContext = App.solarViewModel;
 	}
+
+    private void ContentPage_Loaded(object sender, EventArgs e)
+    {
+		App.solarViewModel.SolarPlotField = SolarPlotField;
+    }
 }

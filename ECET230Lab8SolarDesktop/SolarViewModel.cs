@@ -16,6 +16,28 @@ public class SolarViewModel : INotifyPropertyChanged
     private bool _isLoad1On;
     private bool _isLoad2On;
 
+    private GraphicsView _solarPlotField;
+
+    private List<float> _SolarVoltagePlotPoints;
+    private List<float> _BatteryVoltagePlotPoints;
+    private List<float> _BatteryChargingCurrentPlotPoints;
+    private List<float> _Load1CurrentPlotPoints;
+    private List<float> _Load2CurrentPlotPoints;
+
+    private List<DateTime> _plotPointsX;
+    
+    private const int maxPlotPoints = 600;
+    private int _plotPointsCount = 0;
+
+    public GraphicsView SolarPlotField
+    {
+        get => _solarPlotField;
+        set
+        {
+            _solarPlotField = value;
+            OnPropertyChanged("SolarPlotField");
+        }
+    }
     public bool IsLoad1On
     {
         get => _isLoad1On;
@@ -64,6 +86,7 @@ public class SolarViewModel : INotifyPropertyChanged
         set
         {
             _analog0Voltage = value;
+            _SolarVoltagePlotPoints.Add(SolarVoltage);
             OnPropertyChanged();
             OnPropertyChanged("SolarVoltage");
             OnPropertyChanged("SolarVoltageText");
@@ -75,6 +98,7 @@ public class SolarViewModel : INotifyPropertyChanged
         set
         {
             _analog1Voltage = value;
+            _BatteryChargingCurrentPlotPoints.Add(BatteryChargingCurrent * 1000f);
             OnPropertyChanged();
             OnPropertyChanged("BatteryChargingCurrent");
             OnPropertyChanged("BatteryChargingCurrentText");
@@ -86,6 +110,7 @@ public class SolarViewModel : INotifyPropertyChanged
         set
         {
             _analog2Voltage = value;
+            _BatteryVoltagePlotPoints.Add(BatteryVoltage);
             OnPropertyChanged();
             OnPropertyChanged("BatteryChargingCurrent");
             OnPropertyChanged("BatteryChargingCurrentText");
@@ -99,6 +124,7 @@ public class SolarViewModel : INotifyPropertyChanged
         set
         {
             _analog3Voltage = value;
+            _Load2CurrentPlotPoints.Add(Load2Current * 1000f);
             OnPropertyChanged();
             OnPropertyChanged("Load2Current");
             OnPropertyChanged("Load2CurrentText");
@@ -110,6 +136,7 @@ public class SolarViewModel : INotifyPropertyChanged
         set
         {
             _analog4Voltage = value;
+            _Load1CurrentPlotPoints.Add(Load1Current * 1000f);
             OnPropertyChanged("Load1Current");
             OnPropertyChanged("Load1CurrentText");
         }
@@ -177,7 +204,14 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get
         {
-            return (float)(_analog1Voltage - _analog2Voltage) / 100f;
+            if ((_analog1Voltage - _analog2Voltage) == 0f || _analog2Voltage == 0)
+            {
+                return 0f;
+            }
+            else
+            {   
+                return (float)(_analog1Voltage - _analog2Voltage) / 100f;
+            }
         }
     }
 
@@ -189,6 +223,25 @@ public class SolarViewModel : INotifyPropertyChanged
         }
     }
 
+    public float[][] PlotDataY
+    {
+        get
+        {
+            return new float[5][] { _SolarVoltagePlotPoints.ToArray(), 
+                                    _BatteryVoltagePlotPoints.ToArray(),
+                                    _BatteryChargingCurrentPlotPoints.ToArray(),
+                                    _Load1CurrentPlotPoints.ToArray(), 
+                                    _Load2CurrentPlotPoints.ToArray() };
+        }
+    }
+
+    public DateTime[] PlotDataX
+    {
+        get
+        {
+            return _plotPointsX.ToArray();
+        }
+    }
     public SolarViewModel()
     {
         _analog0Voltage = 0;
@@ -200,10 +253,39 @@ public class SolarViewModel : INotifyPropertyChanged
         _isLoad1On = false;
         _isLoad2On = false;
 
+        _plotPointsX = new List<DateTime>();
+
+        _SolarVoltagePlotPoints = new List<float>();
+        _BatteryVoltagePlotPoints = new List<float>();
+        _Load1CurrentPlotPoints = new List<float>();
+        _Load2CurrentPlotPoints = new List<float>();
+        _BatteryChargingCurrentPlotPoints = new List<float>();
 
     }
 
-    public void OnPropertyChanged([CallerMemberName] string name = "") =>
+    public void AddXPlotPoint(DateTime dateTime)
+    {
+        _plotPointsX.Add(dateTime);
+        _plotPointsCount++;
+        if(_plotPointsCount > maxPlotPoints)
+        {
+            _plotPointsX.RemoveAt(0);
+            _SolarVoltagePlotPoints.RemoveAt(0);
+            _BatteryVoltagePlotPoints.RemoveAt(0);
+            _Load1CurrentPlotPoints.RemoveAt(0);
+            _Load2CurrentPlotPoints.RemoveAt(0);
+            _BatteryChargingCurrentPlotPoints.RemoveAt(0);
+            _plotPointsCount--;
+        }
+    }
+
+    public void OnPropertyChanged([CallerMemberName] string name = "")
+    {
+        if(_solarPlotField != null)
+        {
+            //_solarPlotField.Invalidate();
+        }
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
 }
 

@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ECET230Lab8SolarDesktop"
              x:Class="ECET230Lab8SolarDesktop.SolarControl"
+             Loaded="ContentPage_Loaded"
              Title="SolarControl">
     <ContentPage.BindingContext>
         <local:SolarViewModel/>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <local:SolarPlotField x:Key="drawable"/>
+    </ContentPage.Resources>
     <VerticalStackLayout>
         <Label
             Text="Solar Plant Control"
@@ -84,5 +88,11 @@
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </HorizontalStackLayout>
+        <GraphicsView 
+                Drawable="{StaticResource drawable}"
+                x:Name="SolarPlotField"
+                BackgroundColor="Gray"
+                HeightRequest="800"
+                WidthRequest="800" />
     </VerticalStackLayout>
 </ContentPage>

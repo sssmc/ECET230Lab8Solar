@@ -194,6 +194,9 @@ public partial class RawData : ContentPage
                 App.solarViewModel.Analog3Voltage = rawADCInputs[3];
                 App.solarViewModel.Analog4Voltage = rawADCInputs[4];
 
+                App.solarViewModel.AddXPlotPoint(DateTime.Now);
+                App.solarViewModel.SolarPlotField.Invalidate();
+
 
                 //For every digital input
                 string digitalInputsText = "";
