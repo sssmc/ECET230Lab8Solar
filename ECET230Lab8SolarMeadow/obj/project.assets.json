@@ -2,12 +2,12 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "Meadow/1.3.4": {
+      "Meadow/1.4.0.3": {
         "type": "package",
         "dependencies": {
-          "Meadow.Contracts": "1.3.4",
-          "Meadow.MQTT": "1.3.4",
-          "Meadow.Modbus": "1.3.4",
+          "Meadow.Contracts": "1.4.0.3",
+          "Meadow.MQTT": "1.4.0.3",
+          "Meadow.Modbus": "1.4.0.3",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "NetEscapades.Configuration.Yaml": "2.2.0"
         },
@@ -22,11 +22,11 @@
           }
         }
       },
-      "Meadow.Contracts/1.3.4": {
+      "Meadow.Contracts/1.4.0.3": {
         "type": "package",
         "dependencies": {
-          "Meadow.Logging": "1.3.4",
-          "Meadow.Units": "1.3.4"
+          "Meadow.Logging": "1.4.0.3",
+          "Meadow.Units": "1.4.0.3"
         },
         "compile": {
           "lib/netstandard2.1/Meadow.Contracts.dll": {
@@ -39,10 +39,10 @@
           }
         }
       },
-      "Meadow.F7/1.3.4": {
+      "Meadow.F7/1.4.0.3": {
         "type": "package",
         "dependencies": {
-          "Meadow": "1.3.4"
+          "Meadow": "1.4.0.3"
         },
         "compile": {
           "lib/netstandard2.1/Meadow.F7.dll": {
@@ -55,10 +55,10 @@
           }
         }
       },
-      "Meadow.Foundation/1.3.4": {
+      "Meadow.Foundation/1.4.0.3": {
         "type": "package",
         "dependencies": {
-          "Meadow.Contracts": "1.3.4"
+          "Meadow.Contracts": "1.4.0.3"
         },
         "compile": {
           "lib/netstandard2.1/Meadow.Foundation.dll": {
@@ -71,7 +71,7 @@
           }
         }
       },
-      "Meadow.Logging/1.3.4": {
+      "Meadow.Logging/1.4.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Meadow.Logging.dll": {
@@ -84,10 +84,10 @@
           }
         }
       },
-      "Meadow.Modbus/1.3.4": {
+      "Meadow.Modbus/1.4.0.3": {
         "type": "package",
         "dependencies": {
-          "Meadow.Contracts": "1.3.4",
+          "Meadow.Contracts": "1.4.0.3",
           "System.IO.Ports": "6.0.0"
         },
         "compile": {
@@ -101,7 +101,7 @@
           }
         }
       },
-      "Meadow.MQTT/1.3.4": {
+      "Meadow.MQTT/1.4.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/MQTTnet.dll": {}
@@ -110,7 +110,7 @@
           "lib/netstandard2.1/MQTTnet.dll": {}
         }
       },
-      "Meadow.Units/1.3.4": {
+      "Meadow.Units/1.4.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Meadow.Units.dll": {
@@ -572,52 +572,52 @@
     }
   },
   "libraries": {
-    "Meadow/1.3.4": {
-      "sha512": "FwuqP0brS8I5m1d6JL0s//ERaUtOF3HanqaFCqY9QuNTUGoeWi9KhW/PF9be36GhsR4SFlN/mGILqwNq/59SpA==",
+    "Meadow/1.4.0.3": {
+      "sha512": "qk0l4q1MMdyolL6+1tBWz/vVz7CSqyKlJCS4Rj43vOQlH+6W6YVM7IJ9k5eO09geeityi+o5w1rPn9xj1mwhUA==",
       "type": "package",
-      "path": "meadow/1.3.4",
+      "path": "meadow/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/Meadow.dll",
         "lib/netstandard2.1/Meadow.xml",
-        "meadow.1.3.4.nupkg.sha512",
+        "meadow.1.4.0.3.nupkg.sha512",
         "meadow.nuspec"
       ]
     },
-    "Meadow.Contracts/1.3.4": {
-      "sha512": "hAGh3DKIShTnvFNaLqNA9ggeWhl5z11tgzS4n/yG8C7pfWRNacoC6zBqp5dHr19EUjSem92XNrrVzN/62rNSJQ==",
+    "Meadow.Contracts/1.4.0.3": {
+      "sha512": "QZO81OnoZqJ9uIIOhBXFXOCKAQdDbmgvCiJ4F+M9SzPrjutWZvCAw6JRvn1tP9ALrXxmBGXLCAz5Lk2xQpTwag==",
       "type": "package",
-      "path": "meadow.contracts/1.3.4",
+      "path": "meadow.contracts/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/Meadow.Contracts.dll",
         "lib/netstandard2.1/Meadow.Contracts.xml",
-        "meadow.contracts.1.3.4.nupkg.sha512",
+        "meadow.contracts.1.4.0.3.nupkg.sha512",
         "meadow.contracts.nuspec"
       ]
     },
-    "Meadow.F7/1.3.4": {
-      "sha512": "3scFFlEs/KOl6mSTM2ZNT7pIdZ7t5Gdw1awMGMXDd/SiuAWX8qd4UFJmhdmjLH1D2J9L3/LjccIUv1bCM7MUww==",
+    "Meadow.F7/1.4.0.3": {
+      "sha512": "f6xGvbhyeCHM/TxhOTiHJKzQvTc75Khr1Gy/Gui7ofoIGoLsN4Z+ADCk+vwRSsvrewCRjx6UOlRUe+XQ9MThBQ==",
       "type": "package",
-      "path": "meadow.f7/1.3.4",
+      "path": "meadow.f7/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/Meadow.F7.dll",
         "lib/netstandard2.1/Meadow.F7.xml",
-        "meadow.f7.1.3.4.nupkg.sha512",
+        "meadow.f7.1.4.0.3.nupkg.sha512",
         "meadow.f7.nuspec"
       ]
     },
-    "Meadow.Foundation/1.3.4": {
-      "sha512": "D8yTaztmTZHDZxnCHbVTVTo19HwlKiFZZDFvMP60NjeO3BDPHKX0uFYeAbeEAWgaaFd0Z0oZXnohwrjkZ8IKLA==",
+    "Meadow.Foundation/1.4.0.3": {
+      "sha512": "YWn7ICy+vSfgAqywHI6WHUkTi2/GFhcifXhKb6XYBsSNuFMTyuUrNia9I5MWVz8nLA17arD7EhEJevso4tyWxw==",
       "type": "package",
-      "path": "meadow.foundation/1.3.4",
+      "path": "meadow.foundation/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -625,62 +625,62 @@
         "icon.png",
         "lib/netstandard2.1/Meadow.Foundation.dll",
         "lib/netstandard2.1/Meadow.Foundation.xml",
-        "meadow.foundation.1.3.4.nupkg.sha512",
+        "meadow.foundation.1.4.0.3.nupkg.sha512",
         "meadow.foundation.nuspec"
       ]
     },
-    "Meadow.Logging/1.3.4": {
-      "sha512": "P0tuzluhGTmYpRiHJMvipYMT8cHVYWZT4r1Y1I4LrobVABdTzZlvksWMvHvDlFGbbrY8p57Mb5GikW2dB3sFcw==",
+    "Meadow.Logging/1.4.0.3": {
+      "sha512": "6ku4yoT3nFTDaQwGweLSn2c6upFF7mGQWdpK1ZjeYPGHkI7a1I/ZMA33j8w0xjQH+0RxWSSXrAWk5lNwdoq4tg==",
       "type": "package",
-      "path": "meadow.logging/1.3.4",
+      "path": "meadow.logging/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/Meadow.Logging.dll",
         "lib/netstandard2.1/Meadow.Logging.xml",
-        "meadow.logging.1.3.4.nupkg.sha512",
+        "meadow.logging.1.4.0.3.nupkg.sha512",
         "meadow.logging.nuspec"
       ]
     },
-    "Meadow.Modbus/1.3.4": {
-      "sha512": "NRJlxEU4jcuWOyYDmmoGcxECJ56yy8/DupM8Elogx/Y1YJs1xbrUxyg7ZO4LYiDn8vrXNcBIEP9mPmUvsM3syQ==",
+    "Meadow.Modbus/1.4.0.3": {
+      "sha512": "sUM+GgIhNEyjMaWIlXJVBOIuVLUnpEBK7VBd8wcoQSHLgioySUfMIh9o7glQIjxW5SE0t2cc0sSYyxu6f7+e+Q==",
       "type": "package",
-      "path": "meadow.modbus/1.3.4",
+      "path": "meadow.modbus/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/Meadow.Modbus.dll",
         "lib/netstandard2.1/Meadow.Modbus.xml",
-        "meadow.modbus.1.3.4.nupkg.sha512",
+        "meadow.modbus.1.4.0.3.nupkg.sha512",
         "meadow.modbus.nuspec"
       ]
     },
-    "Meadow.MQTT/1.3.4": {
-      "sha512": "bQdglkjExPbABqXDLdU/cA5nHJmH0FEXsXgyRis2dhJjObr2DSPlWS1iK9BgpQbf/leU8CpdJd4RMraXjbuRVw==",
+    "Meadow.MQTT/1.4.0.3": {
+      "sha512": "J3tM5yF55b2WJ2dp5FX+fQO1WLHVe52V2CfwjeS8t29setYlEXbQo9cisCgMfoYHhT2By2GBxTVoeUO2OHGKtw==",
       "type": "package",
-      "path": "meadow.mqtt/1.3.4",
+      "path": "meadow.mqtt/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/MQTTnet.dll",
-        "meadow.mqtt.1.3.4.nupkg.sha512",
+        "meadow.mqtt.1.4.0.3.nupkg.sha512",
         "meadow.mqtt.nuspec"
       ]
     },
-    "Meadow.Units/1.3.4": {
-      "sha512": "2gT8DbRTxC3r60pi+Y9PY792SY2384XtbWzw8/boQdPmK5u8y4i4r9/tI4RIAgjlie/jMwL0BX85i068z/aC+g==",
+    "Meadow.Units/1.4.0.3": {
+      "sha512": "YxTx0mZKhwcoFYxH55cHkH/DCACeIQPbpIXKnSHp4c1qAMbAeOOIkoUVgsNpwDOcfQffGnt3kZpmp/AqT/yPMQ==",
       "type": "package",
-      "path": "meadow.units/1.3.4",
+      "path": "meadow.units/1.4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
         "lib/netstandard2.1/Meadow.Units.dll",
         "lib/netstandard2.1/Meadow.Units.xml",
-        "meadow.units.1.3.4.nupkg.sha512",
+        "meadow.units.1.4.0.3.nupkg.sha512",
         "meadow.units.nuspec"
       ]
     },
@@ -1514,23 +1514,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sebas\\.nuget\\packages\\": {},
+    "C:\\Users\\C0509401\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
+      "projectUniqueName": "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
       "projectName": "App",
-      "projectPath": "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
-      "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sebas\\source\\repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\obj\\",
+      "projectPath": "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\ECET230Lab8SolarMeadow.csproj",
+      "packagesPath": "C:\\Users\\C0509401\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\C0509401\\Source\\Repos\\sssmc\\ECET230Lab8Solar\\ECET230Lab8SolarMeadow\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\C0509401\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1583,7 +1583,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

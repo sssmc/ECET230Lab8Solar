@@ -11,6 +11,7 @@ public partial class SolarControl : ContentPage
 
     private void ContentPage_Loaded(object sender, EventArgs e)
     {
+		//Set the SolarPlotField property of the SolarViewModel to the SolarPlotField object
 		App.solarViewModel.SolarPlotField = SolarPlotField;
     }
 }

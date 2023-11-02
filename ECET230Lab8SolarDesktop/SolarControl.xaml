@@ -92,7 +92,7 @@
                 Drawable="{StaticResource drawable}"
                 x:Name="SolarPlotField"
                 BackgroundColor="Gray"
-                HeightRequest="800"
-                WidthRequest="800" />
+                HeightRequest="600"
+                WidthRequest="1000" />
     </VerticalStackLayout>
 </ContentPage>

@@ -227,6 +227,7 @@ public class SolarViewModel : INotifyPropertyChanged
     {
         get
         {
+            //Return an array of each of the plot points lists(converted to arrays)
             return new float[5][] { _SolarVoltagePlotPoints.ToArray(), 
                                     _BatteryVoltagePlotPoints.ToArray(),
                                     _BatteryChargingCurrentPlotPoints.ToArray(),
@@ -265,8 +266,11 @@ public class SolarViewModel : INotifyPropertyChanged
 
     public void AddXPlotPoint(DateTime dateTime)
     {
+        //Add a new X plot point
         _plotPointsX.Add(dateTime);
         _plotPointsCount++;
+
+        //If we have reached the max numbers of points, remove one from the start of the list
         if(_plotPointsCount > maxPlotPoints)
         {
             _plotPointsX.RemoveAt(0);
@@ -281,10 +285,6 @@ public class SolarViewModel : INotifyPropertyChanged
 
     public void OnPropertyChanged([CallerMemberName] string name = "")
     {
-        if(_solarPlotField != null)
-        {
-            //_solarPlotField.Invalidate();
-        }
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }

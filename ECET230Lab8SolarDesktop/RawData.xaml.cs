@@ -188,13 +188,17 @@ public partial class RawData : ContentPage
                 adc4ProgressBar.Progress = (float)rawADCInputs[4] / 3300.0f;
                 adc5ProgressBar.Progress = (float)rawADCInputs[5] / 3300.0f;
 
+                //Update the SolarViewModel with the new values
                 App.solarViewModel.Analog0Voltage = rawADCInputs[0];
                 App.solarViewModel.Analog1Voltage = rawADCInputs[1];
                 App.solarViewModel.Analog2Voltage = rawADCInputs[2];
                 App.solarViewModel.Analog3Voltage = rawADCInputs[3];
                 App.solarViewModel.Analog4Voltage = rawADCInputs[4];
 
+                //Add the current time to x points in the SolarViewModel
                 App.solarViewModel.AddXPlotPoint(DateTime.Now);
+
+                //Invalidates the SolarPlotField so that it redraws
                 App.solarViewModel.SolarPlotField.Invalidate();
 
 

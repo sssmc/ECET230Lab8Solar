@@ -8,39 +8,39 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ECET230Lab8SolarDesktop
-build_property.ProjectDir = C:\Users\sebas\source\repos\sssmc\ECET230Lab8Solar\ECET230Lab8SolarDesktop\
+build_property.ProjectDir = C:\Users\C0509401\Source\Repos\sssmc\ECET230Lab8Solar\ECET230Lab8SolarDesktop\
 
-[C:/Users/sebas/source/repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/App.xaml]
+[C:/Users/C0509401/Source/Repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ECET230Lab8SolarDesktop.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/sebas/source/repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/AppShell.xaml]
+[C:/Users/C0509401/Source/Repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ECET230Lab8SolarDesktop.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/sebas/source/repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/RawData.xaml]
+[C:/Users/C0509401/Source/Repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/RawData.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ECET230Lab8SolarDesktop.RawData.xaml
 build_metadata.AdditionalFiles.TargetPath = RawData.xaml
 build_metadata.AdditionalFiles.RelativePath = RawData.xaml
 
-[C:/Users/sebas/source/repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/Resources/Styles/Colors.xaml]
+[C:/Users/C0509401/Source/Repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ECET230Lab8SolarDesktop.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/sebas/source/repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/Resources/Styles/Styles.xaml]
+[C:/Users/C0509401/Source/Repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ECET230Lab8SolarDesktop.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/sebas/source/repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/SolarControl.xaml]
+[C:/Users/C0509401/Source/Repos/sssmc/ECET230Lab8Solar/ECET230Lab8SolarDesktop/SolarControl.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ECET230Lab8SolarDesktop.SolarControl.xaml
 build_metadata.AdditionalFiles.TargetPath = SolarControl.xaml
